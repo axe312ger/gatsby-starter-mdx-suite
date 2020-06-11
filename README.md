@@ -13,8 +13,11 @@
    * Import Page Data Model: `contentful space migration contentful/contentful-migration-page.js -y`
    * Import Blog Data Model: `contentful space migration contentful/contentful-migration-blog.js -y`
 5. Optional: import demo content
-   * `contentful space import contentful/demo-content.json`
-6. Set Contentful API credentials in environment variables: `cp .env.example .env && code .env`
+   * `contentful space import --content-file contentful/demo-content.json`
+6. Connect Gatsby to Contentful API:
+   * Create new access token: `contentful space accesstoken create --name "Gatsby MDX Suite"`
+   * Get space id: See output of creation above or see `contentful space list`
+   * Add access token & sace id to env variables: `cp .env.example .env && code .env`
 7. Lets go: `npm run develop`
 
 
