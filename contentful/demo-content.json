@@ -1,0 +1,292 @@
+{
+  "entries": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "vy6qcpbu0o79"
+          }
+        },
+        "id": "1yGbmc4hrlOJCNeDxXQQ2o",
+        "type": "Entry",
+        "createdAt": "2020-06-11T15:06:33.098Z",
+        "updatedAt": "2020-06-11T15:11:00.670Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 19,
+        "publishedAt": "2020-06-11T15:11:00.670Z",
+        "firstPublishedAt": "2020-06-11T15:11:00.670Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4Y38plj00sVR4wBdoKi5dY"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4Y38plj00sVR4wBdoKi5dY"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 20,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4Y38plj00sVR4wBdoKi5dY"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Home"
+        },
+        "slug": {
+          "en-US": "home"
+        },
+        "metaDescription": {
+          "en-US": "This is the home page"
+        },
+        "content": {
+          "en-US": "<Header>\n  \n# Welcome\n  \n</Header>\n\n<Section>\n  \nYou are ready! Start editing your website now via [Contentful](https://app.contentful.com/) or try out the [editor playground](/docs).\n  \n</Section>"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "vy6qcpbu0o79"
+          }
+        },
+        "id": "6eYrzzCmuJJBZG9wqX65HB",
+        "type": "Entry",
+        "createdAt": "2020-06-11T15:08:50.245Z",
+        "updatedAt": "2020-06-11T15:11:00.669Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-06-11T15:11:00.669Z",
+        "firstPublishedAt": "2020-06-11T15:11:00.669Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4Y38plj00sVR4wBdoKi5dY"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4Y38plj00sVR4wBdoKi5dY"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4Y38plj00sVR4wBdoKi5dY"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "menuItem"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "(ROOT) Header"
+        },
+        "subitems": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3OwfklEQx9beojgZJbQGJg"
+              }
+            }
+          ]
+        },
+        "openInNewTab": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "vy6qcpbu0o79"
+          }
+        },
+        "id": "3OwfklEQx9beojgZJbQGJg",
+        "type": "Entry",
+        "createdAt": "2020-06-11T15:09:03.425Z",
+        "updatedAt": "2020-06-11T15:09:18.441Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-06-11T15:09:18.441Z",
+        "firstPublishedAt": "2020-06-11T15:09:18.441Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4Y38plj00sVR4wBdoKi5dY"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4Y38plj00sVR4wBdoKi5dY"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4Y38plj00sVR4wBdoKi5dY"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "menuItem"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Home"
+        },
+        "linkedPage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1yGbmc4hrlOJCNeDxXQQ2o"
+            }
+          }
+        },
+        "openInNewTab": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "vy6qcpbu0o79"
+          }
+        },
+        "id": "5KvPV3fhthle5tdgpeDSZI",
+        "type": "Entry",
+        "createdAt": "2020-06-11T15:09:29.594Z",
+        "updatedAt": "2020-06-11T15:10:51.834Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2020-06-11T15:10:51.834Z",
+        "firstPublishedAt": "2020-06-11T15:10:51.834Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4Y38plj00sVR4wBdoKi5dY"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4Y38plj00sVR4wBdoKi5dY"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4Y38plj00sVR4wBdoKi5dY"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blogPost"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Your first blogpost"
+        },
+        "slug": {
+          "en-US": "your-first-blogpost"
+        },
+        "publicationDate": {
+          "en-US": "2020-04-20T04:20+02:00"
+        },
+        "teaser": {
+          "en-US": "A short summary of the blog post"
+        },
+        "content": {
+          "en-US": "<Section>\n  \nThe actual content of the blog post\n  \n</Section>"
+        }
+      }
+    }
+  ],
+  "assets": []
+}
