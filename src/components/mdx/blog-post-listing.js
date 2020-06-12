@@ -95,7 +95,7 @@ export default function BlogPostListing() {
           </BlogPostTeaserDescription>
         )}
         <BlogPostTeaserFooter>
-          <CTA href="#todo">{t('newsReadMore')}</CTA>
+          <CTA href="#todo">{t('newsReadMore')} (@todo)</CTA>
         </BlogPostTeaserFooter>
       </BlogPostTeaser>
     ))

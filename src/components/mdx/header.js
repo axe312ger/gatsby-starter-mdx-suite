@@ -102,7 +102,7 @@ const Header = ({ children, backgroundImageId, colorSet }) => {
               <LogoSVG />
             </Link>
           </HeaderTitle>
-          <MenuLevel rootMenuItemId="6Id378BoElgMsJJd81IyP3" />
+          <MenuLevel rootMenuItemId="menuRootHeader" />
           <HeaderMenuControls>
             <LanguageSwitch />
             <ColorModeSwitch />

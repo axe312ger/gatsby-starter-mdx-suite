@@ -48,6 +48,14 @@ module.exports = function (migration) {
       {
         linkMimetypeGroup: ['image'],
       },
+      {
+        assetImageDimensions: {
+          width: {
+            min: 1200,
+            max: null,
+          },
+        },
+      },
     ])
     .disabled(false)
     .omitted(false)

@@ -79,7 +79,7 @@ const Layout = ({ children }) => {
         <Content>{children}</Content>
         <Footer>
           <FooterMenu>
-            <MenuRecursive rootMenuItemId="74X6wG8uRwdlBSDFxmhTt5" />
+            <MenuRecursive rootMenuItemId="menuRootFooter" />
           </FooterMenu>
           <FooterCopy>
             {t('copyright', { year: new Date().getFullYear() })}

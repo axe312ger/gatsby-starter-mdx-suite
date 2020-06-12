@@ -63,11 +63,6 @@ module.exports = function (migration) {
             min: 1200,
             max: null,
           },
-
-          height: {
-            min: 630,
-            max: null,
-          },
         },
       },
     ])
