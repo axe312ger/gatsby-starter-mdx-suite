@@ -3,18 +3,16 @@ import propTypes from 'prop-types'
 
 import IconsContext from '@gatsby-mdx-suite/contexts/icons'
 
-import {
-  EntypoCheck,
-  EntypoControllerRecord,
-  EntypoDotSingle,
-  EntypoStar,
-  EntypoStarOutlined,
-  EntypoVinyl,
-  EntypoFacebook,
-  EntypoInstagram,
-  EntypoYoutube,
-  EntypoLinkedin,
-} from 'react-entypo-icons'
+import EntypoCheck from 'react-entypo-icons/lib/entypo/Check'
+import EntypoControllerRecord from 'react-entypo-icons/lib/entypo/ControllerRecord'
+import EntypoDotSingle from 'react-entypo-icons/lib/entypo/DotSingle'
+import EntypoStar from 'react-entypo-icons/lib/entypo/Star'
+import EntypoStarOutlined from 'react-entypo-icons/lib/entypo/StarOutlined'
+import EntypoVinyl from 'react-entypo-icons/lib/entypo/Vinyl'
+import EntypoFacebook from 'react-entypo-icons/lib/entypo/Facebook'
+import EntypoInstagram from 'react-entypo-icons/lib/entypo/Instagram'
+import EntypoYoutube from 'react-entypo-icons/lib/entypo/Youtube'
+import EntypoLinkedin from 'react-entypo-icons/lib/entypo/Linkedin'
 
 export const onServiceWorkerUpdateReady = () => {
   const answer = window.confirm(
