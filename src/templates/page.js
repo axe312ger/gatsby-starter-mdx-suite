@@ -6,45 +6,33 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { useTranslation } from 'react-i18next'
 
 import MdxSuiteContext from '@gatsby-mdx-suite/contexts/mdx-suite'
-import Seo from '@gatsby-mdx-suite/seo'
+import mergeContextData from '@gatsby-mdx-suite/helpers/data/merge-context-data'
 
-import Layout from '../components/layout'
+import Layout from 'gatsby-theme-mdx-suite-base/src/components/layout/layout'
+import Seo from 'gatsby-theme-mdx-suite-base/src/components/layout/seo'
 
 function PageTemplate({ data, pageContext }) {
   const { i18n } = useTranslation()
   const MdxSuiteData = useContext(MdxSuiteContext)
 
-  const { title, metaDescription, metaImage, content } = data.contentfulPage
+  const { title, content } = data.contentfulPage
 
   // Set current i18next translation language based on page locale
   useEffect(() => {
     if (pageContext.locale !== i18n.language) {
       i18n.changeLanguage(pageContext.locale)
     }
-  }, [pageContext.locale])
+  }, [pageContext.locale, i18n])
 
   return (
     <MdxSuiteContext.Provider
-      value={{
-        ...MdxSuiteData,
+      value={mergeContextData(MdxSuiteData, {
         pageContext,
-        data: {
-          images: content.childMdx.images || [],
-          background: content.childMdx.background || [],
-          floating: content.childMdx.floating || [],
-          videos: content.childMdx.videos || [],
-        },
-      }}
+        data: [content.childMdx],
+      })}
     >
       <Layout>
-        <Seo
-          title={title}
-          description={metaDescription}
-          ogImage={metaImage && `${metaImage.file.url}?w=1200&h=630&fit=fill`}
-          twitterImage={
-            metaImage && `${metaImage.file.url}?w=1200&h=628&fit=fill`
-          }
-        />
+        <Seo title={title} />
         <MDXRenderer>{content.childMdx.body}</MDXRenderer>
       </Layout>
     </MdxSuiteContext.Provider>
@@ -65,51 +53,10 @@ export const pageQuery = graphql`
       pageId: contentful_id
       slug
       title
-      metaDescription
-      metaImage {
-        file {
-          url
-        }
-      }
       content {
         childMdx {
           body
-          images: media(collectionType: "images") {
-            ...MdxSuiteContentfulAsset
-            svg {
-              content
-            }
-            fluid(maxWidth: 1400) {
-              ...GatsbyContentfulFluid_withWebp
-            }
-          }
-          background: media(collectionType: "background") {
-            ...MdxSuiteContentfulAsset
-            svg {
-              content
-            }
-            fluid(maxWidth: 1920) {
-              ...GatsbyContentfulFluid_withWebp
-            }
-          }
-          floating: media(collectionType: "floating") {
-            ...MdxSuiteContentfulAsset
-            svg {
-              content
-            }
-            fluid(maxWidth: 1024) {
-              ...GatsbyContentfulFluid_withWebp
-            }
-          }
-          videos: media(collectionType: "videos") {
-            ...MdxSuiteContentfulAsset
-            videoH264(screenshots: "0", maxWidth: 1280) {
-              path
-              screenshots {
-                path
-              }
-            }
-          }
+          ...MdxSuiteMediaCollections
         }
       }
     }

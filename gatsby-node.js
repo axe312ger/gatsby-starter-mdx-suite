@@ -1,5 +1,5 @@
 const { resolve } = require('path')
-const { createPath } = require('@gatsby-mdx-suite/i18n/helpers')
+const { createPath } = require('@gatsby-mdx-suite/helpers/routing')
 
 exports.createPages = async ({ graphql, actions, getCache }) => {
   const { createPage, createRedirect } = actions
@@ -10,14 +10,12 @@ exports.createPages = async ({ graphql, actions, getCache }) => {
       `
         {
           allContentfulPage(limit: 1000) {
-            edges {
-              node {
-                id
-                pageId: contentful_id
-                locale: node_locale
-                slug
-                title
-              }
+            nodes {
+              id
+              pageId: contentful_id
+              locale: node_locale
+              slug
+              title
             }
           }
         }
@@ -28,8 +26,13 @@ exports.createPages = async ({ graphql, actions, getCache }) => {
       throw result.errors
     }
 
-    result.data.allContentfulPage.edges.map((edge) => {
-      const { id, pageId, locale, slug, title } = edge.node
+    result.data.allContentfulPage.nodes.map((node) => {
+      const { id, pageId, locale, slug, title } = node
+
+      // Ensure we do not overwrite out blog post listing
+      if (slug === 'blog') {
+        return
+      }
 
       const path = createPath({ slug, locale, config })
 
@@ -46,6 +49,7 @@ exports.createPages = async ({ graphql, actions, getCache }) => {
       })
     })
   }
+
   // As we alias the slug `index` to ``, we should redirect users to the start page (e.G. when using Gatsby Cloud Preview)
   createRedirect({
     fromPath: '/index',
@@ -54,7 +58,7 @@ exports.createPages = async ({ graphql, actions, getCache }) => {
     redirectInBrowser: true,
   })
 
-  // Add a redirect from to your default language if your won't serve
+  // Add a redirect from to your default language if you won't serve / directly
   // createRedirect({ fromPath: '/', toPath: '/de', isPermanent: true, redirectInBrowser: true })
 
   await createPages()
