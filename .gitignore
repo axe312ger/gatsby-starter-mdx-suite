@@ -1,6 +1,8 @@
 # Created by https://www.toptal.com/developers/gitignore/api/osx,node,code,linux,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=osx,node,code,linux,windows
 
+tailwind.config.js
+
 ### Code ###
 .vscode/*
 !.vscode/settings.json
