@@ -1,7 +1,21 @@
-const defaultTheme = require('gatsby-theme-mdx-suite-base/src/gatsby-plugin-theme-ui')
+/**
+ * Use this file to add project specific theme configuration.
+ *
+ * Important: The es-modules syntax can not be used here till gatsby-config.js supports it.
+ */
 
-// Here you can alter the themes configuration to fit your projects need
-// Use lodash/merge to extend the default config with your own
-// The resulting theme config is available at /docs/theme
+const merge = require('lodash/merge')
+const baseThemeUiConfig = require('gatsby-theme-mdx-suite-base/src/gatsby-plugin-theme-ui')
 
-module.exports = defaultTheme
+// Overwrite core theme
+module.exports = merge({}, baseThemeUiConfig, {
+  colors: {
+    primary: 'tomato',
+    sets: {
+      primary: {
+        background: 'tomato',
+        secondary: 'tomato',
+      },
+    },
+  },
+})
