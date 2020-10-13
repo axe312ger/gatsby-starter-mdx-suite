@@ -1,4 +1,4 @@
-const themeUiConfig = require('./src/gatsby-plugin-theme-ui')
+const themeConfig = require('./tailwind.config')
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -20,7 +20,7 @@ module.exports = {
       resolve: `gatsby-theme-mdx-suite-core`,
       options: {
         // Configure the MDX Suite
-        themeUiConfig,
+        themeConfig,
         /**
          * Internationalisation
          */
@@ -42,6 +42,26 @@ module.exports = {
     {
       resolve: `gatsby-theme-mdx-suite-base`,
       // options: {}
+    },
+    // Recommended plugins
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: `Inter`,
+              subsets: [`latin`],
+              variants: [`400`, `700`],
+            },
+            {
+              family: `Montserrat`,
+              subsets: [`latin`],
+              variants: [`300`],
+            },
+          ],
+        },
+      },
     },
     // Project specific configuration
     {
