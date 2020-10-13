@@ -11,7 +11,7 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "format": "prettier --write '{./**/*.{js,jsx},*.{js,json}}'",
-    "lint": "eslint src"
+    "lint": "eslint src ./*.js"
   },
   "repository": {
     "type": "git",
@@ -57,20 +57,20 @@
     "typography-theme-ocean-beach": "^0.16.19"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.2",
+    "@typescript-eslint/eslint-plugin": "4.2.0",
+    "@typescript-eslint/parser": "4.2.0",
+    "babel-eslint": "^10.1.0",
     "dotenv": "^8.2.0",
-    "eslint": "^7.5.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-config-standard": "^14.1.1",
-    "eslint-config-standard-react": "^9.0.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.18.3",
-    "eslint-plugin-standard": "^4.0.0",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.1.7",
-    "prettier": "^2.0.5"
+    "eslint": "7.9.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-flowtype": "5.2.0",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-react": "7.x",
+    "eslint-plugin-react-hooks": "4.1.2",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2"
   },
   "husky": {
     "hooks": {
