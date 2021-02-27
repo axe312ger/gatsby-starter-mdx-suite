@@ -1,0 +1,26 @@
+describe('Docs', () => {
+  beforeEach(() => {
+    cy.visit('/docs')
+    cy.savePrivacyManager()
+  })
+
+  it('successfully loads', () => {
+    cy.get('main').should('contain', 'Docs - Welcome')
+  })
+
+  it('playground works', () => {
+    cy.get('main').contains('Playground').click()
+    cy.get('.monaco-editor').should('exist')
+
+    cy.get('select').contains('Open sidebar').parent().select('Media')
+    cy.get('main section h1').should('contain', 'Media')
+  })
+
+  it('component listing works', () => {
+    cy.get('main').contains('Components').click()
+    cy.get('main').should('contain', 'Please pick a component from the menu')
+
+    cy.get('main nav').contains('List').click()
+    cy.get('main').should('contain', '<List></List>')
+  })
+})
