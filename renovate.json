@@ -1,0 +1,17 @@
+{
+  "extends": ["config:base"],
+  "packageRules": [
+    {
+      "extends": "monorepo:gatsby",
+      "groupName": "gatsby monorepo"
+    },
+    {
+      "matchPackagePatterns": ["^@gatsby-mdx-suite", "^gatsby-theme-mdx-suite"],
+      "groupName": "gatsby-mdx-suite packages"
+    },
+    {
+      "matchDepTypes": "devDependencies",
+      "groupName": "devDependencies"
+    }
+  ]
+}
