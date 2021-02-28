@@ -3,11 +3,13 @@
   "packageRules": [
     {
       "extends": "monorepo:gatsby",
-      "groupName": "gatsby monorepo"
+      "groupName": "gatsby monorepo",
+      "prPriority": 4
     },
     {
       "matchPackagePatterns": ["^@gatsby-mdx-suite", "^gatsby-theme-mdx-suite"],
-      "groupName": "gatsby-mdx-suite packages"
+      "groupName": "gatsby-mdx-suite packages",
+      "prPriority": 5
     },
     {
       "matchDepTypes": "devDependencies",
