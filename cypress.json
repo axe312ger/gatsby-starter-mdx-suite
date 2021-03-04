@@ -1,5 +1,9 @@
 {
   "baseUrl": "http://localhost:9000",
   "chromeWebSecurity": false,
-  "projectId": "5yyobc"
+  "projectId": "5yyobc",
+  "retries": {
+    "runMode": 2,
+    "openMode": 0
+  }
 }
