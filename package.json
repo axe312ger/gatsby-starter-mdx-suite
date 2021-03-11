@@ -36,9 +36,9 @@
     "@gatsby-mdx-suite/mdx-layout": "0.25.1",
     "@gatsby-mdx-suite/mdx-video": "0.7.1",
     "@gatsby-mdx-suite/mdx-youtube": "0.9.4",
-    "gatsby": "2.32.9",
-    "gatsby-plugin-manifest": "2.12.1",
-    "gatsby-plugin-offline": "3.10.2",
+    "gatsby": "3.0.4",
+    "gatsby-plugin-manifest": "3.0.0",
+    "gatsby-plugin-offline": "4.0.0",
     "gatsby-plugin-webfonts": "1.1.4",
     "gatsby-theme-mdx-suite-base": "0.9.1",
     "gatsby-theme-mdx-suite-core": "0.7.1",
@@ -74,7 +74,7 @@
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
     "deepmerge": "^4.2.2",
-    "gatsby-plugin-mdx": "^1.2.28",
+    "gatsby-plugin-mdx": "^1.2.28 || ^2.0.0",
     "tailwindcss": "^1.9.0"
   },
   "husky": {
